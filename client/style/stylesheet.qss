@@ -1,0 +1,4 @@
+#LoginDialog ,#register_dialog{
+background-color:rgb(255,255,255)
+}
+
