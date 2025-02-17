@@ -19,7 +19,8 @@ protected:
 private slots:
     void onVScrollBarMoved(int min, int max);
 
-
+private:
+    void initStyleSheet();
 private:
     //QWidget *m_pCenterWidget;
     QVBoxLayout *m_pVl;

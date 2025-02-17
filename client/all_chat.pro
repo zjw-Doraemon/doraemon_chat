@@ -13,7 +13,7 @@ SOURCES += \
     chatpage.cpp \
     chatuserlist.cpp \
     chatuserwid.cpp \
-    #chatview.cpp \
+    chatview.cpp \
     clickedlabel.cpp \
     custom_edit.cpp \
     forget_password.cpp \
@@ -35,7 +35,7 @@ HEADERS += \
     chatpage.h \
     chatuserlist.h \
     chatuserwid.h \
-    #chatview.h \
+    chatview.h \
     clickedlabel.h \
     custom_edit.h \
     forget_password.h \
