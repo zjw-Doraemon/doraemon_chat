@@ -26,9 +26,12 @@ SOURCES += \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
+    messagetextedit.cpp \
+    picturebubble.cpp \
     register_dialog.cpp \
     tcpmgr.cpp \
     test_widget.cpp \
+    textbubble.cpp \
     timerbtn.cpp \
     usermgr.cpp
 
@@ -49,10 +52,13 @@ HEADERS += \
     loaddlg.h \
     logindialog.h \
     mainwindow.h \
+    messagetextedit.h \
+    picturebubble.h \
     register_dialog.h \
     singleton.h \
     tcpmgr.h \
     test_widget.h \
+    textbubble.h \
     timerbtn.h \
     usermgr.h
 

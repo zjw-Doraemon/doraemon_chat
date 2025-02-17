@@ -1,7 +1,7 @@
-#include "ChatItemBase.h"
+#include "chatitembase.h"
 #include <QFont>
 #include <QVBoxLayout>
-#include "BubbleFrame.h"
+#include "bubbleframe.h"
 ChatItemBase::ChatItemBase(ChatRole role, QWidget *parent)
     : QWidget(parent)
     , m_role(role)
@@ -21,7 +21,7 @@ ChatItemBase::ChatItemBase(ChatRole role, QWidget *parent)
     QGridLayout *pGLayout = new QGridLayout();
     pGLayout->setVerticalSpacing(3);
     pGLayout->setHorizontalSpacing(3);
-    pGLayout->setMargin(3);
+    pGLayout->setContentsMargins(3, 3, 3, 3);
     QSpacerItem*pSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
     if(m_role == ChatRole::Self)
     {
