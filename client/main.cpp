@@ -48,7 +48,8 @@ int main(int argc, char *argv[])
     gate_url_prefix = "http://"+gate_host+":"+gate_port;
     qDebug()<<gate_host<<gate_port;
     qDebug()<<gate_url_prefix;
-
+    // 设置高dpi支持
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     a.setWindowIcon(QIcon(":/ico/icon.ico"));
     MainWindow w;
     w.show();

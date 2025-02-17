@@ -21,6 +21,7 @@ private:
 signals:
     void swichRegister();
     void switch_foreget_widget();
+    void switch_chatwindow();
     void sig_connect_tcp(ServerInfo);
 
 private slots:

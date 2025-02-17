@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , _login_dialog(new LoginDialog())
     , _forget_widget(new forget_password())
+    , _chat_dialog(new chat_dialog())
 
 {
     ui->setupUi(this);
@@ -24,16 +25,25 @@ MainWindow::MainWindow(QWidget *parent)
         register_dig.exec();
     });
     // 切换忘记密码窗口 与主窗口 互相切换
-    connect(_login_dialog,&LoginDialog::switch_foreget_widget,this,[&]{
+    connect(_login_dialog,&LoginDialog::switch_foreget_widget,this,[=]{
         _login_dialog = static_cast<LoginDialog*>(takeCentralWidget());
         setCentralWidget(_forget_widget);
 
     });
-    connect(_forget_widget,&forget_password::switch_login_dia,this,[&]{
+    connect(_forget_widget,&forget_password::switch_login_dia,this,[=]{
         _forget_widget = static_cast<forget_password*>(takeCentralWidget());
         setCentralWidget(_login_dialog);
 
     });
+    // 切换聊天界面
+    connect(_login_dialog,&LoginDialog::switch_chatwindow,this,[this]{
+
+        _chat_dialog->show();
+        this->close();
+    });
+    emit _login_dialog->switch_chatwindow();
+
+
 
 
 
@@ -45,3 +55,5 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+

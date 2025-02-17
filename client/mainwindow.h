@@ -5,6 +5,7 @@
 #include "logindialog.h"
 #include "register_dialog.h"
 #include "forget_password.h"
+#include "chat_dialog.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,10 +20,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private:
     Ui::MainWindow *ui;
     LoginDialog *_login_dialog;
     register_dialog * _register_dialog;
     forget_password * _forget_widget;
+    chat_dialog * _chat_dialog;
 };
 #endif // MAINWINDOW_H

@@ -110,7 +110,7 @@ void TcpMgr::initHandlers(){
 
 
         emit sig_log_success();
-        emit sig_swich_chatdlg();
+
     });
 
 

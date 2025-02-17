@@ -23,7 +23,10 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="res.qrc">:/res/ice.png</pixmap>
+         <pixmap resource="res.qrc">:/res/head_5.jpg</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

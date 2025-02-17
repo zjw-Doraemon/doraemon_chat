@@ -22,6 +22,7 @@ LoginDialog::LoginDialog(QWidget *parent)
         QMessageBox::information(this,"提示","登录成功");
     });
     inithandle_respond();
+
 }
 
 LoginDialog::~LoginDialog()
