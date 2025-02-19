@@ -82,10 +82,11 @@ void MessageTextEdit::dropEvent(QDropEvent *event)
 
 void MessageTextEdit::keyPressEvent(QKeyEvent *e)
 {
-    if((e->key()==Qt::Key_Enter||e->key()==Qt::Key_Return)&& !(e->modifiers() & Qt::ShiftModifier))
-    {
+    if ((e->key() == Qt::Key_Enter || e->key() == Qt::Key_Return) &&
+        !(e->modifiers() & Qt::ShiftModifier)) {
         emit send();
-        return;
+    } else {
+        QTextEdit::keyPressEvent(e);  // 允许默认换行行为
     }
     QTextEdit::keyPressEvent(e);
 }

@@ -5,6 +5,7 @@
 #include "global.h"
 #include <QObject>
 #include <functional>
+#include "userdata.h"
 class TcpMgr:public QObject, public Singleton<TcpMgr>,
                public std::enable_shared_from_this<TcpMgr> // qt不一定需要
 {
@@ -37,6 +38,7 @@ signals:
     void sig_swich_chatdlg();
     void sig_login_failed(int);
     void sig_log_success();
+    void sig_user_search(std::shared_ptr<SearchInfo>);
 
 private:
 
